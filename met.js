@@ -40,7 +40,7 @@ const getObjectInfo = function(objectID, callback){
             const data = response.body
             const info = {
                 searchTerm: "",
-                artist: data.constituents[0].name,
+                artist: data.constituents ? data.constituents[0].name : "",
                 title: data.title,
                 year: data.objectEndDate,
                 technique: data.medium,
